@@ -1,0 +1,17 @@
+{
+  "name": "mongoclient",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./MongoClient.js"
+  },
+  "dependencies": {
+    "ip": "^1.1.5"
+  },
+  "main": "MongoClient.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

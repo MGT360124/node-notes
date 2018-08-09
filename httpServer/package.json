@@ -1,0 +1,12 @@
+{
+    "name": "httpserver",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node ./index"
+    },
+    "dependencies": {
+        "express-session": "^1.15.6",
+        "ip": "^1.1.5"
+    }
+}

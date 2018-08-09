@@ -1,0 +1,10 @@
+{
+    "name": "maoguotao",
+    "sex": "M",
+    "number": "141304011015",
+    "member": [
+        {"father":"maofagen","age":48},
+        {"mather":"shenglanjiao","age":44},
+        {"sister":"毛淑琴","age":21}
+    ]
+}
