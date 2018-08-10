@@ -8,9 +8,9 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, db) => {
     if (err) { throw err; };
     //创建数据库mgt360124
     const mgt360124 = db.db("mgt360124");
-    //创建文档 site
+    //创建集合 site
     const site = mgt360124.collection("site")
-    //创建文档 images
+    //创建集合 images
     const images = mgt360124.collection("images")
     const obj = { name: "maoguotao", url: "www.mymgt360124.cn" };
 
@@ -76,4 +76,3 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, db) => {
 
     db.close();
 })
-

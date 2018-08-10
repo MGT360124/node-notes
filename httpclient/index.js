@@ -4,7 +4,9 @@ const http = require("http");
 const url = require("url");
 const querystring = require("querystring");
 const util = require("util");
+const ip = require("ip");
 let getData = "";
+let host = ip.address();
 
 const postData = querystring.stringify({
     "username": "maoguotao",
@@ -13,14 +15,14 @@ const postData = querystring.stringify({
 console.log(`postData is ${postData}`)
 const options = {
     protocal: "http:",
-    host: "localhost",
+    host: host,
     port: "3000",
     method: "POST",
     path: "/upload",
     headers: {
         "Content-Type": "text/plain",
         "Content-Length": Buffer.byteLength(postData),
-        "Origin": "http://localhost:3000"
+        "Origin": `http://${host}:3000`
     }
 }
 // 通过 http.request()发送请求
@@ -43,9 +45,9 @@ httpRequest.on("error", (e) => {
 })
 httpRequest.write(postData); // 向服务器发送请求体
 httpRequest.end();  // 必须使用end结束向服务器发送请求。
-httpRequest.abort() // 终止正在进行的请求
+// httpRequest.abort() // 终止正在进行的请求
 // httpRequest.setTimeout(timeout,callback);请求超时调用的回调函数
-exports.module = { getData: getData }
+// exports.module = { getData: getData }
 
 // http.request(options,callback(res))和http.get(options,callback(res))
 // 等于 HttpRequest = http.request(options); HttpRequest.on("response",callback(res))
