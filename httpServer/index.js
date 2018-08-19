@@ -33,4 +33,4 @@ const httpServer = http.createServer((req, res) => {
 })
 
 httpServer.listen(port, host);
-console.log(`Http Server running at http://${host}:${port}`)
+console.log(`Http Server running at http://${host}:${port}/index.html`)
